@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="1000.00" prefWidth="1000.00" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentViewController">
+   <children>
+      <GridPane layoutX="312.0" layoutY="71.0" prefHeight="95.0" prefWidth="232.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="116.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="84.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="First Name :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Last Name : " GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Student Number : " GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="firstNameStudent" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lastNameStudent" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="numberStudent" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <RadioButton fx:id="student1" layoutX="48.0" layoutY="316.0" mnemonicParsing="false" onAction="#getStudent1" text="Student 1" />
+      <RadioButton fx:id="student2" layoutX="48.0" layoutY="353.0" mnemonicParsing="false" onAction="#getStudent2" text="Student 2" />
+      <ListView fx:id="stActivities" layoutX="312.0" layoutY="211.0" prefHeight="150.0" prefWidth="200.0" />
+      <Label layoutX="312.0" layoutY="183.0" text="Activities :" />
+      <ImageView fx:id="studentImage" fitHeight="254.0" fitWidth="247.0" layoutX="16.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
