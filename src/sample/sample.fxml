@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="1000.00" prefWidth="1000.00" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentViewController">
+<AnchorPane prefHeight="400.00" prefWidth="500.00" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentViewController">
    <children>
       <GridPane layoutX="312.0" layoutY="71.0" prefHeight="95.0" prefWidth="232.0">
         <columnConstraints>
@@ -50,7 +51,10 @@
             </Label>
          </children>
       </GridPane>
-      <RadioButton fx:id="student1" layoutX="48.0" layoutY="316.0" mnemonicParsing="false" onAction="#getStudent1" text="Student 1" />
+      <RadioButton fx:id="student1" layoutX="48.0" layoutY="316.0" mnemonicParsing="false" onAction="#getStudent1" text="Student 1" selected="true">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></RadioButton>
       <RadioButton fx:id="student2" layoutX="48.0" layoutY="353.0" mnemonicParsing="false" onAction="#getStudent2" text="Student 2" />
       <ListView fx:id="stActivities" layoutX="312.0" layoutY="211.0" prefHeight="150.0" prefWidth="200.0" />
       <Label layoutX="312.0" layoutY="183.0" text="Activities :" />

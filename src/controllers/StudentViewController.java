@@ -81,18 +81,6 @@ public class StudentViewController implements Initializable {
 
         student1o = new Students("Tony", "White", 123456, arrayList2);
         student2o = new Students("John", "Watson", 234567, arrayList1);
-    }
-
-    /**
-     * Adding toggle group for radio buttons.
-     */
-    ToggleGroup radioGroup = new ToggleGroup();
-
-    /**
-     * This is the Student one method.
-     */
-    @FXML
-    public void getStudent1() {
 
 
         student1.setToggleGroup(radioGroup);
@@ -106,6 +94,32 @@ public class StudentViewController implements Initializable {
         ObservableList<String> observableArrayList =
                 FXCollections.observableArrayList(student1o.getInterests());
         stActivities.setItems((ObservableList) observableArrayList);
+    }
+
+    /**
+     * Adding toggle group for radio buttons.
+     */
+    ToggleGroup radioGroup = new ToggleGroup();
+
+    /**
+     * This is the Student one method.
+     */
+    @FXML
+    public void getStudent1() {
+
+        student1.setToggleGroup(radioGroup);
+
+        firstNameStudent.setText(student1o.getFirstName());
+        lastNameStudent.setText(student1o.getLastName());
+        numberStudent.setText(Integer.toString(student1o.getStudentNumber()));
+        studentImage.setImage(student1o.getStImage());
+
+
+        ObservableList<String> observableArrayList =
+                FXCollections.observableArrayList(student1o.getInterests());
+        stActivities.setItems((ObservableList) observableArrayList);
+
+
 
     }
 
